@@ -1,5 +1,10 @@
 @include tablet {
 
+    body {
+        background: url(../images/bg-tablet-pattern.svg) top -120px right -135px no-repeat;
+        background-size: 800px 800px;
+    }
+
     .header {
         padding: 4rem;
         display: flex;
@@ -38,6 +43,7 @@
     }
 
     .main {
+        background: none;
         padding: 4rem;
         display: flex;
         flex-direction: row-reverse;
@@ -89,6 +95,8 @@
     }
 
     .slider {
+        background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
+        background-size: 600px 600px;
         padding: 4rem;
 
         &__container {
@@ -190,6 +198,8 @@
     }
 
     .section {
+        background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
+        background-size: 600px 600px;
         display: flex;
         padding: 8rem 16.5rem;
     

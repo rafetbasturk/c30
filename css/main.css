@@ -461,6 +461,10 @@ footer p a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background: url(../images/bg-tablet-pattern.svg) top -120px right -135px no-repeat;
+    background-size: 800px 800px;
+  }
   .header {
     padding: 4rem;
     display: -webkit-box;
@@ -496,6 +500,7 @@ footer p a:hover {
     font-size: 1.25rem;
   }
   .main {
+    background: none;
     padding: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -538,6 +543,8 @@ footer p a:hover {
     padding: 2rem 8.5rem 0;
   }
   .slider {
+    background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
+    background-size: 600px 600px;
     padding: 4rem;
   }
   .slider__container--slides {
@@ -619,6 +626,8 @@ footer p a:hover {
     margin-top: 1rem;
   }
   .section {
+    background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
+    background-size: 600px 600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
