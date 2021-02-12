@@ -667,6 +667,7 @@ footer p a:hover {
   }
   .carousel {
     width: 1440px;
+    overflow-x: hidden;
     display: block;
     text-align: center;
     padding: 4rem 0 18rem;
@@ -677,7 +678,7 @@ footer p a:hover {
     margin-bottom: 10rem;
   }
   .carousel__container {
-    width: 100%;
+    width: 1440px;
     margin-bottom: 40rem;
   }
   .carousel__container--slides {
