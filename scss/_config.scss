@@ -4,26 +4,45 @@
     box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
 
 // variables
 
-$pri-desaturated-dark-cyan: hsl(180, 29%, 50%);
-$bg-l-grayish-cyan: hsl(180, 52%, 96%);
-$filter-l-grayish-cyan: hsl(180, 31%, 95%);
-$d-grayish-cyan: hsl(180, 8%, 52%);
-$v-d-grayish-cyan: hsl(180, 14%, 20%);
+$pri-bright-red: hsl(12, 88%, 59%);
+$pri-dark-blue: hsl(228, 39%, 23%);
+$d-grayish-blue: hsl(227, 12%, 61%);
+$v-d-blue: hsl(233, 12%, 13%);
+$v-pale-red: hsl(13, 100%, 96%);
+$v-light-gray: hsl(0, 0%, 98%);
+
+// mixins
+
+@mixin btn {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    color: $v-light-gray;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    background: $pri-bright-red;
+    text-decoration: none;
+    border-radius: 3rem;
+
+    &:hover {
+        transform: scale(.98);
+    }
+}
 
 // responsive
 
 @mixin tablet {
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
         @content; 
     }
 }
 
 @mixin laptop {
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1200px) {
         @content; 
     }
 }
