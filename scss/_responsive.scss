@@ -1,384 +1,100 @@
 @include tablet {
-
-    body {
-        background: url(../images/bg-tablet-pattern.svg) top -120px right -135px no-repeat;
-        background-size: 800px 800px;
+    header {
+        background: url(../images/bg-header-desktop.svg) top left no-repeat, linear-gradient(to bottom, $pri-desaturated-dark-cyan 0, $pri-desaturated-dark-cyan 156px, $bg-l-grayish-cyan 156px, $bg-l-grayish-cyan 100%);
+        background-size: 100% 156px, 100% 100%;
+        padding: 2.5rem 8rem 2rem;
     }
 
-    .header {
-        padding: 4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        &__icons {
-            
-            &--menu {
-                display: none;
-            }
-        }
-    
-        &__nav {
-            display: block !important;
-            position: unset;
-            background: transparent;
-            margin: 0;
-            box-shadow: none !important;
+    main {
+        padding: 5rem 8rem 1rem;
+        margin: 0;
 
-    
-            ul {
-                padding: 0;
-            }
-    
-            li {
-                display: inline-block;
-                padding: 0 0 0 2.5rem;
-            }
-    
-            a {
-                display: inline-block;
-                font-size: 1.25rem;
-            }
-        }
-    }
+        .card {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: fit-content;
+            padding: 3rem 2.5rem;
+            margin-bottom: 5rem;
 
-    .main {
-        background: none;
-        padding: 4rem;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    
-        &__img {
-            width: 50%;
-            margin-left: 2rem;
-        }
-    
-        &__intro {
-            padding: 0;
-            margin-right: 2rem;
+            &__profile {
 
-            &--heading {
-                font-size: 3rem;
-            }
-    
-            &--text {
-                color: $d-grayish-blue;
-                margin: 2rem 0;
-                line-height: 1.7;
-            }
-    
-            &--btn {
-                margin-top: 1rem;
-            }
-        }
-    }
-
-    .section {
-        padding: 4rem;
-    
-        &__articles {
-    
-            &--parts {
-            //     padding: 0 0 3rem 0;
-    
-                div {
-                    border-radius: 2rem;
+                &__img {
+                    width: 60px;
+                    height: 60px;
+                    top: -3rem;
                 }
-    
-                p {
-                    font-size: 1.6rem;
-                    padding: 2rem 8.5rem 0;
+
+                &__hr {
+                    display: none;
                 }
             }
-        }
-    }
 
-    .slider {
-        background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
-        background-size: 600px 600px;
-        padding: 4rem;
-
-        &__container {
-
-            &--slides {
-                padding: 5rem 4.1rem 3rem;
+            &__competences {
+                height: fit-content;
+    
+                &--role, &--level, &--languages, &--tools {
+                    margin: 0 0 0 1.5rem;
+                }
             }
-
-            p {
-                font-size: 1.6rem;
-            }
-        }
-    }
-
-    aside {
-        background: url(../images/bg-simplify-section-desktop.svg) bottom left 220px no-repeat, $pri-bright-red;
-        height: 220px;
-        justify-content: space-evenly;
-        padding: 0 4rem;
-    }
-
-    footer {
-        padding: 5rem 4rem 3rem;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-
-        form {
-            grid-column: 2 / 3;
-        }
-
-        img {
-            grid-row: 1 / 2;
-            justify-self: start;
-            margin-bottom: 0;
-        }
-
-        ul {
-
-            li {
-                margin: 0;
-            }
-        }
-
-        .attribution {
-            grid-column: 1 / -1;
         }
     }
 }
 
 @include laptop {
-    .header {
-        padding: 5.5rem 16.5rem 2rem;
 
-        &__icons {
+    header {
+        padding: 2.5rem 16.5rem 0;
+    }
 
-            &--logo {
-                width: 100%;
-                height: auto;
-            }
-        }
+    .filter {
+        padding: 1.2rem 4rem 1.2rem 3.2rem;
 
-        &__btn {
-            display: block;
-        }
-
-        &__nav {
-
-            li {
-                padding: 0 1.25rem;
-            }
+        &__clear {
+            margin-right: 0;
         }
     }
 
-    .main {
-        padding: 8rem 16.5rem;
+    main {
+        padding: 4rem 16.5rem 3rem;
+        margin: 0;
         
-        &__img {
-            width: 50%;
-            margin-left: 2rem;
-        }
-    
-        &__intro {
-            text-align: left;
+        .card {
+            padding: 2.5rem 4rem 2.5rem 3.5rem;
+            flex-direction: row;
+            align-items: center;
+            height: fit-content;
+            margin-bottom: 2.5rem;
 
-            &--heading {
-                font-size: 5rem;
-            }
-    
-            &--text {
-                color: $d-grayish-blue;
-                margin: 3rem 18rem 3rem 0;
-                line-height: 1.7;
-            }
-    
-            &--btn {
-                margin-top: 1rem;
-            }
-        }
-    }
-
-    .section {
-        background: url(../images/bg-tablet-pattern.svg) bottom left -300px no-repeat;
-        background-size: 600px 600px;
-        display: flex;
-        padding: 8rem 16.5rem;
-    
-        &__title {
-            padding: 0 8rem 0 0;
-            text-align: left;
-    
-            &--heading {
-                font-size: 3.6rem;
-            }
-    
-            &--text {
-                font-size: 1.6rem;
-                line-height: 1.6;
-                padding-right: 10rem;
-            }
-        }
-    
-        &__articles {
-    
-            &--parts {
-                padding: 0 0 3rem 0;
-    
-                div {
-                    background: transparent;
-                }
-    
-                h3 {
-                    padding-left: 3rem;
-                }
-    
-                p {
-                    font-size: 1.6rem;
-                    line-height: 1.6;
-                    padding: 0 3rem 0 10rem;
-                }
-
-                #last-text {
-                    margin-right: 9rem;
-                }
-            }
-        }
-    }
-
-    .slider {
-        display: none;
-    }
-
-    .carousel {
-        width: 1440px;
-        overflow-x: hidden;
-        display: block;
-        text-align: center;
-        padding: 4rem 0 18rem;
-    
-        &__heading {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 10rem;
-        }
-    
-        &__container {
-            width: 1440px;
-            margin-bottom: 40rem;
-
-            &--slides {
-                background: $v-light-gray;
-                padding: 5rem 4.1rem 3rem;
-                height: 250px;
+            &__profile {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                margin-bottom: 1.4rem;
-                width: 540px;
-                position: absolute;
+                align-items: center;
 
-                &:first-of-type {
-                    left: -120px;
+                &__img {
+                    width: 88px;
+                    height: 88px;
+                    position: unset;
+                    margin-right: 2.5rem;
                 }
-
-                &:nth-of-type(2) {
-                    left: 50%;
-                    transform: translateX(-50%);
+        
+                &__info {
+        
+                    &--company{
+                        font-size: 1.4rem;
+                    }
+        
+                    &--position {
+                        font-size: 1.8rem;
+                    }
+        
+                    &--postedAt, &--contract, &--location {
+                        font-size: 1.4rem;
+                    }
+        
+                    &--dot{
+                        margin: 0 1.8rem;
+                    }
                 }
-
-                &:nth-of-type(3) {
-                    left: 1020px;
-                }
-
-                &:nth-of-type(4) {
-                    left: 1590px;
-                }
-
-                &:nth-of-type(5) {
-                    display: flex;
-                    left: 2160px;
-                }
-
-                &:nth-of-type(6) {
-                    display: flex;
-                    left: 2730px;
-                }
-
-                img {
-                    display: block;
-                    width: 72px;
-                    height: 72px;
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-    
-                p {
-                    font-size: 1.6rem;
-                    color: $d-grayish-blue;
-                    line-height: 2;
-                }
-            }
-    
-            &--dots {
-                display: none
-            }  
-        }
-    
-        &__btn {
-            @include btn;
-        }
-    }
-
-    aside {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 16.5rem;
-    
-        h5 {
-            text-align: left;
-            flex-basis: 500px;
-            margin-bottom: 0;
-        }
-    }
-
-    footer {
-        padding: 6rem 16.5rem;
-        grid-template-columns: 1fr 3fr 2fr;
-        align-items: flex-start;
-
-        form {
-            grid-column: 3 / 4;
-        }
-
-        ul {
-            grid-column: 2 / 3;
-            grid-row: 1 / 3;
-
-            li {
-                margin-left: 8rem;
-            }
-        }
-
-        .social {
-            margin: 0;
-            justify-content: space-between;
-            svg {
-                transform: scale(1);
-
-                &:hover {
-                    transform: scale(1.2);
-                }
-            }
-        }
-
-        .attribution {
-            grid-column: 3 / -1;
-            justify-self: right;
-
-            p {
-                text-align: right;
             }
         }
     }
